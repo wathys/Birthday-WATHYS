@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>INVITATION DE WATHYS 🌈🧠 CHAOS MAXIMAL (LÉGÈRE TRANSPARENCE)</title>
+
+<style>
+/* 🎨 STYLES DE BASE */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* FOND ARC-EN-CIEL */
+body {
+    background: linear-gradient(
+        270deg,
+        red, orange, yellow, green, cyan, blue, violet
+    );
+    background-size: 1400% 1400%;
+    animation: rainbow 6s linear infinite alternate;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* TITRE */
+h1 {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+    color: #00ffff;
+    font-size: 3.5em;
+    padding: 10px;
+    background: none;
+    text-shadow: 0 0 10px white;
+}
+
+/* BOUTON CALENDRIER (Centre) */
+.calendar-btn {
+    position: relative;
+    z-index: 10;
+    display: block;
+    margin: 30px auto;
+    padding: 20px 50px;
+    background: #ff00ff;
+    color: white;
+    font-size: 22px;
+    font-weight: bolder;
+    border-radius: 50px;
+    text-decoration: none;
+    width: fit-content;
+    transition: transform 0.2s, background 0.2s;
+    border: 5px dashed yellow;
+}
+
+.calendar-btn:hover {
+    transform: scale(1.3) rotate(10deg);
+    background: #ffff00;
+    color: black;
+}
+
+/* NOUVEAU BOUTON AUDIO (Bas Gauche) */
+.audio-launcher {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+    padding: 15px 25px;
+    background: #00ff00; /* Vert très visible */
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+    transition: transform 0.2s;
+}
+
+.audio-launcher:hover {
+    transform: scale(1.1);
+}
+
+
+/* IMAGES CHAOS */
+.chaos img {
+    position: absolute;
+    object-fit: contain;
+    max-width: 500px; 
+    max-height: 500px;
+    border: none;
+    box-shadow: none;
+    transition: filter 0.5s, opacity 0.5s; 
+    
+    /* MODIFICATION CLÉ : Opacité à 0.9 (10% de transparence) */
+    opacity: 0.9; 
+}
+
+/* MAINTIENT DE LA LÉGÈRE TRANSPARENCE MÊME AU SURVOL */
+.chaos img:hover {
+    filter: saturate(300%) hue-rotate(90deg);
+    /* Ne pas changer l'opacité ici */
+}
+
+/* --- KEYFRAME DE ROTATION PERMANENTE --- */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* --- CLASSE POUR ROTATION PERMANENTE --- */
+.spinning {
+    animation: spin 3s linear infinite; 
+}
+
+
+/* --- KEYFRAMES DE MOUVEMENT (MAINTENUS) --- */
+@keyframes move1_chaos { 0% { transform: translate(0,0) rotate(var(--rot)); } 25% { transform: translate(150px,-100px) rotate(calc(var(--rot) + 90deg)); } 50% { transform: translate(-50px, 150px) rotate(calc(var(--rot) - 45deg)); } 75% { transform: translate(100px, 50px) rotate(calc(var(--rot) + 120deg)); } 100% { transform: translate(0,0) rotate(var(--rot)); } }
+@keyframes move2_chaos { 0% { transform: translate(0,0) rotate(var(--rot)); } 25% { transform: translate(-100px,180px) rotate(calc(var(--rot) - 60deg)); } 50% { transform: translate(120px, -50px) rotate(calc(var(--rot) + 150deg)); } 75% { transform: translate(-200px, 100px) rotate(calc(var(--rot) - 100deg)); } 100% { transform: translate(0,0) rotate(var(--rot)); } }
+@keyframes move3_chaos { 0% { transform: translate(0,0) rotate(var(--rot)); } 25% { transform: translate(80px,-200px) rotate(calc(var(--rot) + 100deg)); } 50% { transform: translate(180px, 100px) rotate(calc(var(--rot) - 90deg)); } 75% { transform: translate(-150px, -150px) rotate(calc(var(--rot) + 50deg)); } 100% { transform: translate(0,0) rotate(var(--rot)); } }
+
+/* --- CLASSES DE MOUVEMENT UNIQUES (MAINTENUES) --- */
+.move_unique_1 { animation: move1_chaos 4.1s cubic-bezier(.5,-0.5,.5,1.5) infinite alternate; }
+.move_unique_2 { animation: move2_chaos 6.3s cubic-bezier(.7,-0.8,.3,1.8) infinite alternate; }
+.move_unique_3 { animation: move3_chaos 5.0s cubic-bezier(.6,-0.6,.4,1.6) infinite alternate; }
+.move_unique_4 { animation: move1_chaos 7.5s cubic-bezier(.4,1.2,.6,-0.2) infinite alternate; }
+.move_unique_5 { animation: move2_chaos 4.8s cubic-bezier(.1,1.5,.9,-0.5) infinite alternate; }
+.move_unique_6 { animation: move3_chaos 6.9s cubic-bezier(.8,-0.7,.2,1.7) infinite alternate; }
+.move_unique_7 { animation: move1_chaos 5.7s cubic-bezier(.3,1.3,.7,-0.3) infinite alternate; }
+.move_unique_8 { animation: move2_chaos 8.2s cubic-bezier(.5,0,.5,1) infinite alternate; }
+.move_unique_9 { animation: move3_chaos 4.5s cubic-bezier(.2,1.8,.8,-0.8) infinite alternate; }
+.move_unique_10 { animation: move1_chaos 6.7s cubic-bezier(.9,-0.9,.1,1.9) infinite alternate; }
+.move_unique_11 { animation: move2_chaos 5.3s cubic-bezier(0,2,1,-1) infinite alternate; }
+.move_unique_12 { animation: move3_chaos 7.8s cubic-bezier(.5,1.5,.5,-0.5) infinite alternate; }
+.move_unique_13 { animation: move1_chaos 4.9s cubic-bezier(.3,.8,.7,.2) infinite alternate; }
+.move_unique_14 { animation: move3_chaos 8.5s cubic-bezier(.4,.5,.6,.5) infinite alternate; } 
+.move_unique_15 { animation: move1_chaos 7.0s cubic-bezier(.8,.2,.2,.8) infinite alternate; }
+.move_unique_16 { animation: move2_chaos 5.9s cubic-bezier(.3,1.6,.7,-0.6) infinite alternate; }
+
+
+/* NOTE DISCRÈTE */
+.discrete-note {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 0.7em;
+    z-index: 100;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎉 INVITATION DE WATHYS 🌈🧠 CHAOS MAXIMAL 🎉</h1>
+
+<a class="calendar-btn"
+    href="https://calendar.app.google/m9i6kEnoPw4YaV6x5"
+    onclick="openCalendarAndPlaySound(event)">
+    🚀 AJOUTER AU CALENDRIER
+</a>
+
+<div class="chaos">
+    <img src="Mario.png" class="move_unique_1 spinning" style="--rot:-25deg; top:5%; left:5%; width:280px;">
+    <img src="Minion.jpg" class="move_unique_2" style="--rot:15deg; top:60%; left:5%; width:300px;">
+    <img src="fortnitecake.png" class="move_unique_3" style="--rot:40deg; top:10%; left:75%; width:320px;">
+    <img src="tuntung.png" class="move_unique_4" style="--rot:-40deg; top:75%; left:25%; width:260px;">
+    <img src="67.png" class="move_unique_5 spinning" style="--rot:75deg; top:5%; left:45%; width:240px;">
+    <img src="batman.png" class="move_unique_6" style="--rot:-15deg; top:50%; left:80%; width:310px;">
+    <img src="IMG_0173.JPG" class="move_unique_7" style="--rot:-60deg; top:70%; left:65%; width:290px;">
+    <img src="Toad.png" class="move_unique_8 spinning" style="--rot:20deg; top:30%; left:15%; width:280px;">
+    <img src="noir.png" class="move_unique_9" style="--rot:10deg; top:25%; left:55%; width:250px;">
+    <img src="nyan-cat-gif-1.gif" class="move_unique_10" style="--rot:0deg; top:45%; left:35%; width:310px;">
+    <img src="giphy.gif" class="move_unique_11" style="--rot:-10deg; top:80%; left:45%; width:270px;">
+    <img src="Ptf0XvUZxvqNHNmfQxEsize640.jpg" class="move_unique_12" style="--rot:30deg; top:20%; left:30%; width:260px;">
+    <img src="so-57ecdc4466a4bdbe42a2ef29-ph0.jpg" class="move_unique_13" style="--rot:-20deg; top:40%; left:70%; width:290px;">
+    <img src="discord.png" class="move_unique_4 spinning" style="--rot:50deg; top:15%; left:50%; width:300px;">
+
+    <img src="gigachad.png" class="move_unique_14" style="--rot:45deg; top:85%; left:10%; width:350px;">
+    <img src="nugget.gif" class="move_unique_15 spinning" style="--rot:-30deg; top:55%; left:20%; width:200px;">
+    <img src="steve.png" class="move_unique_16" style="--rot:10deg; top:10%; left:5%; width:250px;">
+    
+
+</div>
+
+<div class="audio-launcher" onclick="startBrainrot()">
+    🎵 ▶️
+</div>
+
+<audio id="music" loop>
+    <source src="son.mp3" type="audio/mpeg">
+</audio>
+
+<div class="discrete-note">
+    aucun pays n'a été asséché durant la création du site
+</div>
+
+<script>
+
+function startBrainrot() {
+    const audio = document.getElementById("music");
+    
+    // Lancer la lecture audio après le clic utilisateur
+    if (audio.paused) {
+        audio.play().catch(error => {
+            console.error("Échec de la lecture audio. Vérifiez si 'son.mp3' est correctement placé.", error);
+        });
+    }
+}
+
+// Fonction pour le bouton calendrier : ouvre la pop-up et lance le son
+function openCalendarAndPlaySound(event) {
+    event.preventDefault(); // Empêche la navigation sur la page actuelle
+
+    const url = event.currentTarget.href;
+    
+    // Ouvrir dans une fenêtre détachée (pop-up)
+    window.open(url, 'calendrier_pop_up', 'width=800,height=700,status=no,toolbar=no,menubar=no,location=no');
+
+    // Lancer le son
+    startBrainrot();
+}
+
+</script>
+
+</body>
+</html>
